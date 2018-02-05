@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/oldSubscriptionsTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Existing Subscriptions" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvSubscriptions"
+        android:layout_width="395dp"
+        android:layout_height="263dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/oldSubscriptionsTitle"
+        android:layout_weight="1"
+        android:scrollbars="vertical" />
+
+    <TextView
+        android:id="@+id/addSubText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/dateStarted"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="Add/View/Edit" />
+
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/dateStartedText"
+        android:hint="Enter Subscription Name"
+        android:inputType="text"
+        android:maxLength="20" />
+
+    <TextView
+        android:id="@+id/dateStartedText"
+        android:layout_width="335dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/dateStarted"
+        android:layout_alignBottom="@+id/dateStarted"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp"
+        android:layout_toEndOf="@+id/dateStarted"
+        android:layout_toRightOf="@+id/dateStarted" />
+
+    <Button
+        android:id="@+id/dateStarted"
+        android:layout_width="203dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/monthlyCharge"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Record Date Started" />
+
+
+    <EditText
+        android:id="@+id/monthlyCharge"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/comment"
+        android:layout_alignLeft="@+id/save"
+        android:layout_alignStart="@+id/save"
+        android:hint="Enter Monthly Charge"
+        android:inputType="numberDecimal"
+        android:scrollbars="horizontal" />
+
+    <EditText
+        android:id="@+id/comment"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/save"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:hint="Optional: Enter Comment"
+        android:inputType="text"
+        android:maxLength="30"
+        android:scrollbars="horizontal" />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/dateStarted"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/dateStarted"
+        android:layout_marginBottom="13dp"
+        android:text="Save" />
+
+</LinearLayout>
